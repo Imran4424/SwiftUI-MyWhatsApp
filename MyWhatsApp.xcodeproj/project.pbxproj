@@ -39,6 +39,8 @@
 		1D14590C2B39B45E006D7856 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1D14590B2B39B45E006D7856 /* FirebaseRemoteConfigSwift */; };
 		1D14590E2B39B45E006D7856 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1D14590D2B39B45E006D7856 /* FirebaseStorage */; };
 		1D1459102B39B45E006D7856 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 1D14590F2B39B45E006D7856 /* FirebaseStorageCombine-Community */; };
+		1D1459132B39C3BA006D7856 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1459122B39C3BA006D7856 /* SignUpView.swift */; };
+		1D1459162B39C642006D7856 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1459152B39C642006D7856 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		1D1458CE2B39A685006D7856 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D1458D12B39A685006D7856 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D1458D82B39A8F5006D7856 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1D1459122B39C3BA006D7856 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		1D1459152B39C642006D7856 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				1D1458CA2B39A684006D7856 /* MyWhatsAppApp.swift */,
+				1D1459142B39C5D7006D7856 /* Extensions */,
+				1D1459112B39C355006D7856 /* View */,
 				1D1458CC2B39A684006D7856 /* ContentView.swift */,
 				1D1458CE2B39A685006D7856 /* Assets.xcassets */,
 				1D1458D82B39A8F5006D7856 /* GoogleService-Info.plist */,
@@ -122,6 +128,22 @@
 				1D1458D12B39A685006D7856 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1D1459112B39C355006D7856 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D1459122B39C3BA006D7856 /* SignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D1459142B39C5D7006D7856 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1D1459152B39C642006D7856 /* String+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D1459162B39C642006D7856 /* String+Extensions.swift in Sources */,
 				1D1458CD2B39A684006D7856 /* ContentView.swift in Sources */,
+				1D1459132B39C3BA006D7856 /* SignUpView.swift in Sources */,
 				1D1458CB2B39A684006D7856 /* MyWhatsAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
