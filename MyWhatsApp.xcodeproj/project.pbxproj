@@ -11,6 +11,7 @@
 		1D1458CD2B39A684006D7856 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1458CC2B39A684006D7856 /* ContentView.swift */; };
 		1D1458CF2B39A685006D7856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D1458CE2B39A685006D7856 /* Assets.xcassets */; };
 		1D1458D22B39A685006D7856 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D1458D12B39A685006D7856 /* Preview Assets.xcassets */; };
+		1D1458D92B39A8F5006D7856 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D1458D82B39A8F5006D7856 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		1D1458CC2B39A684006D7856 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1D1458CE2B39A685006D7856 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D1458D12B39A685006D7856 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1D1458D82B39A8F5006D7856 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 				1D1458CA2B39A684006D7856 /* MyWhatsAppApp.swift */,
 				1D1458CC2B39A684006D7856 /* ContentView.swift */,
 				1D1458CE2B39A685006D7856 /* Assets.xcassets */,
+				1D1458D82B39A8F5006D7856 /* GoogleService-Info.plist */,
 				1D1458D02B39A685006D7856 /* Preview Content */,
 			);
 			path = MyWhatsApp;
@@ -127,6 +130,7 @@
 			files = (
 				1D1458D22B39A685006D7856 /* Preview Assets.xcassets in Resources */,
 				1D1458CF2B39A685006D7856 /* Assets.xcassets in Resources */,
+				1D1458D92B39A8F5006D7856 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
