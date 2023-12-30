@@ -9,7 +9,17 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        Text("MainView")
+        TabView {
+            GroupListContainerView()
+                .tabItem {
+                    Label("Chats", systemImage: "message.fill")
+                }
+            
+            Text("Setting")
+                .tabItem { 
+                    Label("Settings", systemImage: "gear")
+                }
+        }
     }
 }
 
