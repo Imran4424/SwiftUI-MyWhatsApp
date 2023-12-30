@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SignUpView: View {
     @EnvironmentObject private var userModel: UserModel
+    @EnvironmentObject private var appState: AppState
     
     @State private var email: String = ""
     @State private var password: String = ""
@@ -42,6 +43,7 @@ struct SignUpView: View {
                     
                     Button("Log In") {
                         // take user to login view
+                        appState.routes.append(.login)
                     }
                     
                     Spacer()
@@ -73,6 +75,7 @@ extension SignUpView {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             try await userModel.updateDisplayName(for: result.user, displayName: displayName)
+            appState.routes.append(.login)
         } catch {
             errorMessage = error.localizedDescription
             print(error)
@@ -83,4 +86,5 @@ extension SignUpView {
 #Preview {
     SignUpView()
         .environmentObject(UserModel())
+        .environmentObject(AppState())
 }

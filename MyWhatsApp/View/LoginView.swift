@@ -9,6 +9,7 @@ import FirebaseAuth
 import SwiftUI
 
 struct LoginView: View {
+    @EnvironmentObject private var appState: AppState
     
     @State private var email: String = ""
     @State private var password: String = ""
@@ -37,6 +38,9 @@ struct LoginView: View {
                     
                     Button("Log In") {
                         // take user to login view
+                        Task {
+                            await login()
+                        }
                     }
                     .disabled(!isFormValid)
                     .buttonStyle(.borderless)
@@ -44,9 +48,7 @@ struct LoginView: View {
                     Spacer()
                     
                     Button("Sign Up") {
-                        Task {
-                            
-                        }
+                        appState.routes.append(.signUp)
                     }
                     .buttonStyle(.borderless)
                     
@@ -68,7 +70,8 @@ extension LoginView {
     private func login() async {
         do {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
-                // go to the main screen
+            // go to the main screen
+            appState.routes.append(.main)
         } catch {
             print(error.localizedDescription)
         }
@@ -79,4 +82,5 @@ extension LoginView {
 
 #Preview {
     LoginView()
+        .environmentObject(AppState())
 }
