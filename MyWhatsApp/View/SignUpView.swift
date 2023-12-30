@@ -9,6 +9,7 @@ import FirebaseAuth
 import SwiftUI
 
 struct SignUpView: View {
+    @EnvironmentObject private var userModel: UserModel
     
     @State private var email: String = ""
     @State private var password: String = ""
@@ -71,14 +72,15 @@ extension SignUpView {
     private func signUp() async {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
+            try await userModel.updateDisplayName(for: result.user, displayName: displayName)
         } catch {
             errorMessage = error.localizedDescription
             print(error)
         }
-        
     }
 }
 
 #Preview {
     SignUpView()
+        .environmentObject(UserModel())
 }
