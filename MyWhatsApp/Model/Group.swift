@@ -15,3 +15,10 @@ struct Group: Codable, Identifiable {
         documentId ?? UUID().uuidString
     }
 }
+
+// MARK: - methods
+extension Group {
+    func toDictionary() -> [String: Any] {
+        return ["subject": subject]
+    }
+}
