@@ -47,6 +47,7 @@
 		1D17AFFE2B401055001052D4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D17AFFD2B401055001052D4 /* AppState.swift */; };
 		1D17B0002B408ED1001052D4 /* GroupListContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D17AFFF2B408ED1001052D4 /* GroupListContainerView.swift */; };
 		1D17B0022B4091B4001052D4 /* AddNewGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D17B0012B4091B4001052D4 /* AddNewGroupView.swift */; };
+		1D6FBF552B4B1BFA00C5A3BD /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FBF542B4B1BFA00C5A3BD /* Group.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		1D17AFFD2B401055001052D4 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		1D17AFFF2B408ED1001052D4 /* GroupListContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListContainerView.swift; sourceTree = "<group>"; };
 		1D17B0012B4091B4001052D4 /* AddNewGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGroupView.swift; sourceTree = "<group>"; };
+		1D6FBF542B4B1BFA00C5A3BD /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				1D17AFF72B3FFC1E001052D4 /* UserModel.swift */,
 				1D17AFFD2B401055001052D4 /* AppState.swift */,
+				1D6FBF542B4B1BFA00C5A3BD /* Group.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D6FBF552B4B1BFA00C5A3BD /* Group.swift in Sources */,
 				1D17AFFA2B3FFDA7001052D4 /* LoginView.swift in Sources */,
 				1D17B0022B4091B4001052D4 /* AddNewGroupView.swift in Sources */,
 				1D17AFFC2B400AEA001052D4 /* MainView.swift in Sources */,

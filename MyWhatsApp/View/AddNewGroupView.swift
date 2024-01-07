@@ -39,12 +39,19 @@ struct AddNewGroupView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Create") {
-                        
+                        saveGroup()
                     }
                     .disabled(!isFormValid)
                 }
             }
         }
+    }
+}
+
+// MARK: - Methods
+extension AddNewGroupView {
+    private func saveGroup() {
+        let group = Group(subject: )
     }
 }
 
