@@ -20,6 +20,17 @@ class UserModel: ObservableObject {
         try? await request.commitChanges()
     }
     
+    func populateGroups() async throws {
+        let db = Firestore.firestore()
+        let snapshot = try await db.collection("groups")
+            .getDocuments()
+        
+        groups = snapshot.documents.compactMap { snapshot in
+            // we need to get a group based on snapshot
+            return Group.fromSnapshot(snapshot: snapshot)
+        }
+    }
+    
     func saveGroup(group: Group, completion: @escaping (Error?) -> Void) {
         let db = Firestore.firestore()
         var docRef: DocumentReference? = nil
