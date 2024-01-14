@@ -5,6 +5,7 @@
 //  Created by Shah Md Imran Hossain on 14/1/24.
 //
 
+import FirebaseAuth
 import SwiftUI
 
 struct ChatMessageListView: View {
@@ -13,8 +14,35 @@ struct ChatMessageListView: View {
     
     var body: some View {
         List(chatMessages) { chatMessage in
-            Text(chatMessage.text)
+            VStack {
+                if isChatMessageFromCurrentUser(chatMessage) {
+                    HStack {
+                        Spacer()
+                        ChatMessageView(chatMessage: chatMessage, direction: .right, color: .blue)
+                    }
+                } else {
+                    HStack {
+                        ChatMessageView(chatMessage: chatMessage, direction: .left, color: .gray)
+                        Spacer()
+                    }
+                }
+                
+                Spacer()
+                    .frame(height: 20)
+            }
+            .listRowSeparator(.hidden)
         }
+    }
+}
+
+// MARK: - methods
+extension ChatMessageListView {
+    private func isChatMessageFromCurrentUser(_ chatMessage: ChatMessage) -> Bool {
+        guard let currentUser = Auth.auth().currentUser else {
+            return false
+        }
+        
+        return currentUser.uid == chatMessage.uid
     }
 }
 

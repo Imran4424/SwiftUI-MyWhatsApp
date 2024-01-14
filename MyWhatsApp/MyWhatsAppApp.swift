@@ -30,7 +30,13 @@ struct MyWhatsAppApp: App {
             NavigationStack(path: $appState.routes) {
                 ZStack {
                     if Auth.auth().currentUser != nil {
-                        MainView()
+                        if let displayName = Auth.auth().currentUser?.displayName {
+                            if displayName == "guest" {
+                                LoginView()
+                            } else {
+                                MainView()
+                            }
+                        }
                     } else {
                         LoginView()
                     }

@@ -53,6 +53,7 @@
 		1D6FBF5C2B53E8A700C5A3BD /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FBF5B2B53E8A700C5A3BD /* ChatMessage.swift */; };
 		1D6FBF5E2B5440C600C5A3BD /* ChatMessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FBF5D2B5440C600C5A3BD /* ChatMessageListView.swift */; };
 		1D6FBF602B544EAD00C5A3BD /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FBF5F2B544EAD00C5A3BD /* Thread.swift */; };
+		1D6FBF622B54525E00C5A3BD /* ChatMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FBF612B54525E00C5A3BD /* ChatMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		1D6FBF5B2B53E8A700C5A3BD /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		1D6FBF5D2B5440C600C5A3BD /* ChatMessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageListView.swift; sourceTree = "<group>"; };
 		1D6FBF5F2B544EAD00C5A3BD /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
+		1D6FBF612B54525E00C5A3BD /* ChatMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				1D6FBF572B4C6C0D00C5A3BD /* GroupListView.swift */,
 				1D6FBF592B53D7FB00C5A3BD /* GroupDetailView.swift */,
 				1D6FBF5D2B5440C600C5A3BD /* ChatMessageListView.swift */,
+				1D6FBF612B54525E00C5A3BD /* ChatMessageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				1D17B0002B408ED1001052D4 /* GroupListContainerView.swift in Sources */,
 				1D17AFF82B3FFC1E001052D4 /* Model.swift in Sources */,
 				1D6FBF582B4C6C0D00C5A3BD /* GroupListView.swift in Sources */,
+				1D6FBF622B54525E00C5A3BD /* ChatMessageView.swift in Sources */,
 				1D6FBF5A2B53D7FB00C5A3BD /* GroupDetailView.swift in Sources */,
 				1D1458CB2B39A684006D7856 /* MyWhatsAppApp.swift in Sources */,
 				1D6FBF602B544EAD00C5A3BD /* Thread.swift in Sources */,
