@@ -31,7 +31,7 @@ struct MyWhatsAppApp: App {
                 ZStack {
                     if Auth.auth().currentUser != nil {
                         if let displayName = Auth.auth().currentUser?.displayName {
-                            if displayName == "guest" {
+                            if displayName == "Guest" {
                                 LoginView()
                             } else {
                                 MainView()
