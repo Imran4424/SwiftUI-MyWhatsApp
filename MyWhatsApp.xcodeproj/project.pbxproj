@@ -51,6 +51,7 @@
 		1D6FBF582B4C6C0D00C5A3BD /* GroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FBF572B4C6C0D00C5A3BD /* GroupListView.swift */; };
 		1D6FBF5A2B53D7FB00C5A3BD /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FBF592B53D7FB00C5A3BD /* GroupDetailView.swift */; };
 		1D6FBF5C2B53E8A700C5A3BD /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FBF5B2B53E8A700C5A3BD /* ChatMessage.swift */; };
+		1D6FBF5E2B5440C600C5A3BD /* ChatMessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FBF5D2B5440C600C5A3BD /* ChatMessageListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		1D6FBF572B4C6C0D00C5A3BD /* GroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListView.swift; sourceTree = "<group>"; };
 		1D6FBF592B53D7FB00C5A3BD /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
 		1D6FBF5B2B53E8A700C5A3BD /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		1D6FBF5D2B5440C600C5A3BD /* ChatMessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				1D17B0012B4091B4001052D4 /* AddNewGroupView.swift */,
 				1D6FBF572B4C6C0D00C5A3BD /* GroupListView.swift */,
 				1D6FBF592B53D7FB00C5A3BD /* GroupDetailView.swift */,
+				1D6FBF5D2B5440C600C5A3BD /* ChatMessageListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D6FBF552B4B1BFA00C5A3BD /* Group.swift in Sources */,
+				1D6FBF5E2B5440C600C5A3BD /* ChatMessageListView.swift in Sources */,
 				1D17AFFA2B3FFDA7001052D4 /* LoginView.swift in Sources */,
 				1D17B0022B4091B4001052D4 /* AddNewGroupView.swift in Sources */,
 				1D17AFFC2B400AEA001052D4 /* MainView.swift in Sources */,
