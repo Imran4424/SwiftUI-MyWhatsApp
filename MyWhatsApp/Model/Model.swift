@@ -23,6 +23,10 @@ class Model: ObservableObject {
         try? await request.commitChanges()
     }
     
+    func detachFirebaseListener() {
+        self.firestoreListener?.remove()
+    }
+    
     func listenForChatMessages(in group: Group) {
         chatMessages.removeAll()
         
