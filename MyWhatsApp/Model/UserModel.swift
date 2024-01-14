@@ -31,6 +31,36 @@ class UserModel: ObservableObject {
         }
     }
     
+    func saveChatMessageToGroup(chatMessage: ChatMessage, group: Group) async throws {
+        let db = Firestore.firestore()
+        guard let groupDocumentId = group.documentId else {
+            print("group document id is nil")
+            return
+        }
+        
+        let _ = try await  db.collection("groups")
+            .document(groupDocumentId)
+            .collection("messages")
+            .addDocument(data: chatMessage.toDictionary())
+    }
+    
+    /*
+    func saveChatMessageToGroup(text: String, group: Group, completion: @escaping (Error?) -> Void) {
+        let db = Firestore.firestore()
+        guard let groupDocumentId = group.documentId else {
+            print("group document id is nil")
+            return
+        }
+        
+        db.collection("groups")
+            .document(groupDocumentId)
+            .collection("messages")
+            .addDocument(data: ["chatText": text]) { error in
+                completion(error)
+            }
+    }
+    */
+    
     func saveGroup(group: Group, completion: @escaping (Error?) -> Void) {
         let db = Firestore.firestore()
         var docRef: DocumentReference? = nil
