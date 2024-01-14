@@ -1,5 +1,5 @@
 //
-//  UserModel.swift
+//  Model.swift
 //  MyWhatsApp
 //
 //  Created by Shah Md Imran Hossain on 30/12/23.
@@ -11,7 +11,7 @@ import FirebaseFirestoreSwift
 import Foundation
 
 @MainActor
-class UserModel: ObservableObject {
+class Model: ObservableObject {
     @Published var groups: [Group] = []
     
     func updateDisplayName(for user: User, displayName: String) async throws {

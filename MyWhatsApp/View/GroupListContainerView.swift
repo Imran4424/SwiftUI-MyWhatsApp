@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GroupListContainerView: View {
-    @EnvironmentObject private var userModel: UserModel
+    @EnvironmentObject private var model: Model
     @State private var isPresented: Bool = false
     
     var body: some View {
@@ -20,13 +20,13 @@ struct GroupListContainerView: View {
                 }
             }
             
-            GroupListView(groups: userModel.groups)
+            GroupListView(groups: model.groups)
             
             Spacer()
         }
         .task {
             do {
-                try await userModel.populateGroups()
+                try await model.populateGroups()
             } catch {
                 print(error)
             }
@@ -41,5 +41,5 @@ struct GroupListContainerView: View {
 
 #Preview {
     GroupListContainerView()
-        .environmentObject(UserModel())
+        .environmentObject(Model())
 }

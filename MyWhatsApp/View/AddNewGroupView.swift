@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddNewGroupView: View {
     @Environment(\.dismiss) private var dismiss
-    @EnvironmentObject private var userModel: UserModel
+    @EnvironmentObject private var model: Model
     @State private var groupSubject = ""
     
     private var isFormValid: Bool {
@@ -53,7 +53,7 @@ struct AddNewGroupView: View {
 extension AddNewGroupView {
     private func saveGroup() {
         let group = Group(subject: groupSubject)
-        userModel.saveGroup(group: group) { error in
+        model.saveGroup(group: group) { error in
             if let error {
                 print(error.localizedDescription)
             }
@@ -65,5 +65,5 @@ extension AddNewGroupView {
 
 #Preview {
     AddNewGroupView()
-        .environmentObject(UserModel())
+        .environmentObject(Model())
 }

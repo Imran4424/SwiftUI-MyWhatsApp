@@ -23,7 +23,7 @@ struct MyWhatsAppApp: App {
     // register app delegate for firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject private var appState = AppState()
-    @StateObject private var userModel = UserModel()
+    @StateObject private var model = Model()
     
     var body: some Scene {
         WindowGroup {
@@ -46,7 +46,7 @@ struct MyWhatsAppApp: App {
                 }
             }
             .environmentObject(appState)
-            .environmentObject(userModel)
+            .environmentObject(model)
         }
     }
 }

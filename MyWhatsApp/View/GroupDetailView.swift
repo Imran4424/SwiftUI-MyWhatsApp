@@ -9,7 +9,7 @@ import FirebaseAuth
 import SwiftUI
 
 struct GroupDetailView: View {
-    @EnvironmentObject private var userModel: UserModel
+    @EnvironmentObject private var model: Model
     
     let group: Group
     @State private var chatText = ""
@@ -45,11 +45,11 @@ extension GroupDetailView {
         
         let chatMessage = ChatMessage(text: chatText, uid: currentUser.uid, displayName: currentUser.displayName ?? "Guest")
         
-        try await userModel.saveChatMessageToGroup(chatMessage: chatMessage, group: group)
+        try await model.saveChatMessageToGroup(chatMessage: chatMessage, group: group)
     }
 }
 
 #Preview {
     GroupDetailView(group: Group(subject: "Test"))
-        .environmentObject(UserModel())
+        .environmentObject(Model())
 }

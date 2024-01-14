@@ -9,7 +9,7 @@ import FirebaseAuth
 import SwiftUI
 
 struct SignUpView: View {
-    @EnvironmentObject private var userModel: UserModel
+    @EnvironmentObject private var model: Model
     @EnvironmentObject private var appState: AppState
     
     @State private var email: String = ""
@@ -74,7 +74,7 @@ extension SignUpView {
     private func signUp() async {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
-            try await userModel.updateDisplayName(for: result.user, displayName: displayName)
+            try await model.updateDisplayName(for: result.user, displayName: displayName)
             appState.routes.append(.login)
         } catch {
             errorMessage = error.localizedDescription
@@ -85,6 +85,6 @@ extension SignUpView {
 
 #Preview {
     SignUpView()
-        .environmentObject(UserModel())
+        .environmentObject(Model())
         .environmentObject(AppState())
 }
