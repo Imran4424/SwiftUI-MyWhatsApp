@@ -13,25 +13,31 @@ struct ChatMessageListView: View {
     let chatMessages: [ChatMessage]
     
     var body: some View {
-        List(chatMessages) { chatMessage in
+        ScrollView {
             VStack {
-                if isChatMessageFromCurrentUser(chatMessage) {
-                    HStack {
+                ForEach(chatMessages) { chatMessage in
+                    VStack {
+                        if isChatMessageFromCurrentUser(chatMessage) {
+                            HStack {
+                                Spacer()
+                                ChatMessageView(chatMessage: chatMessage, direction: .right, color: .blue)
+                            }
+                        } else {
+                            HStack {
+                                ChatMessageView(chatMessage: chatMessage, direction: .left, color: .gray)
+                                Spacer()
+                            }
+                        }
+                        
                         Spacer()
-                        ChatMessageView(chatMessage: chatMessage, direction: .right, color: .blue)
+                            .frame(height: 20)
+                            .id(chatMessage.id)
                     }
-                } else {
-                    HStack {
-                        ChatMessageView(chatMessage: chatMessage, direction: .left, color: .gray)
-                        Spacer()
-                    }
+                    .listRowSeparator(.hidden)
                 }
-                
-                Spacer()
-                    .frame(height: 20)
             }
-            .listRowSeparator(.hidden)
         }
+        .padding([.bottom], 60)
     }
 }
 
