@@ -56,6 +56,7 @@
 		1D6FBF622B54525E00C5A3BD /* ChatMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FBF612B54525E00C5A3BD /* ChatMessageView.swift */; };
 		1D6FBF642B54648800C5A3BD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FBF632B54648800C5A3BD /* SettingsView.swift */; };
 		1D6FBF662B5464D200C5A3BD /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FBF652B5464D200C5A3BD /* Image+Extension.swift */; };
+		1DB71A162B5D91AB0039266F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB71A152B5D91AB0039266F /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		1D6FBF612B54525E00C5A3BD /* ChatMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageView.swift; sourceTree = "<group>"; };
 		1D6FBF632B54648800C5A3BD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1D6FBF652B5464D200C5A3BD /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
+		1DB71A152B5D91AB0039266F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				1D6FBF542B4B1BFA00C5A3BD /* Group.swift */,
 				1D6FBF5B2B53E8A700C5A3BD /* ChatMessage.swift */,
 				1D6FBF5F2B544EAD00C5A3BD /* Thread.swift */,
+				1DB71A152B5D91AB0039266F /* ImagePicker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				1D6FBF582B4C6C0D00C5A3BD /* GroupListView.swift in Sources */,
 				1D6FBF622B54525E00C5A3BD /* ChatMessageView.swift in Sources */,
 				1D6FBF5A2B53D7FB00C5A3BD /* GroupDetailView.swift in Sources */,
+				1DB71A162B5D91AB0039266F /* ImagePicker.swift in Sources */,
 				1D1458CB2B39A684006D7856 /* MyWhatsAppApp.swift in Sources */,
 				1D6FBF602B544EAD00C5A3BD /* Thread.swift in Sources */,
 			);
