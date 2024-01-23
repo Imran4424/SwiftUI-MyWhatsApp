@@ -27,6 +27,15 @@ class Model: ObservableObject {
         self.firestoreListener?.remove()
     }
     
+    func updatePhotoURL(for user: User, photoURL: URL) async throws {
+        
+        let request = user.createProfileChangeRequest()
+        request.photoURL = photoURL
+        try await request.commitChanges()
+        
+        // update UserInf for all messages
+    }
+    
     func listenForChatMessages(in group: Group) {
         chatMessages.removeAll()
         

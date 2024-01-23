@@ -15,7 +15,7 @@ struct MainView: View {
                     Label("Chats", systemImage: "message.fill")
                 }
             
-            Text("Setting")
+            SettingsView()
                 .tabItem { 
                     Label("Settings", systemImage: "gear")
                 }
@@ -25,4 +25,5 @@ struct MainView: View {
 
 #Preview {
     MainView()
+        .environmentObject(Model())
 }
