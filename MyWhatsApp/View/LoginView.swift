@@ -69,7 +69,7 @@ struct LoginView: View {
 extension LoginView {
     private func login() async {
         do {
-            let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            let _ = try await Auth.auth().signIn(withEmail: email, password: password)
             // go to the main screen
             appState.routes.append(.main)
         } catch {

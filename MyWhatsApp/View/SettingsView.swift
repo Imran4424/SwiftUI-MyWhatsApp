@@ -6,6 +6,7 @@
 //
 
 import FirebaseAuth
+import FirebaseStorage
 import SwiftUI
 
 struct SettingsConfig {
@@ -59,6 +60,33 @@ struct SettingsView: View {
         .sheet(item: $settingsConfig.sourceType, content: { sourceType in
             ImagePicker(image: $settingsConfig.selectedImage, sourceType: sourceType)
         })
+        .onChange(of: settingsConfig.selectedImage) { oldImage, newImage in
+            // resize the image
+            guard let image = newImage,
+                  let resizedImage = image.resize(),
+                  let imageData = resizedImage.pngData() else {
+                print("setting image resizing failed")
+                return
+            }
+            
+            // upload the image to Firebase Storage to get the url
+            Task {
+                guard let currentUser = Auth.auth().currentUser else {
+                    print("current user is nil")
+                    return
+                }
+                
+                let filename = "\(currentUser.uid).png"
+                
+                do {
+                    let url = try await Storage.storage().uploadData(for: filename, data: imageData, bucket: .photos)
+                    print(url)
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+            
+        }
         .onAppear {
             settingsConfig.displayName = displayName
         }
