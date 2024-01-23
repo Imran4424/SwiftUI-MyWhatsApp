@@ -57,6 +57,7 @@
 		1D6FBF642B54648800C5A3BD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FBF632B54648800C5A3BD /* SettingsView.swift */; };
 		1D6FBF662B5464D200C5A3BD /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FBF652B5464D200C5A3BD /* Image+Extension.swift */; };
 		1DB71A162B5D91AB0039266F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB71A152B5D91AB0039266F /* ImagePicker.swift */; };
+		1DB71A182B60309A0039266F /* UIImagePickerController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB71A172B60309A0039266F /* UIImagePickerController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		1D6FBF632B54648800C5A3BD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1D6FBF652B5464D200C5A3BD /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		1DB71A152B5D91AB0039266F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1DB71A172B60309A0039266F /* UIImagePickerController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImagePickerController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			children = (
 				1D1459152B39C642006D7856 /* String+Extensions.swift */,
 				1D6FBF652B5464D200C5A3BD /* Image+Extension.swift */,
+				1DB71A172B60309A0039266F /* UIImagePickerController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				1D1459162B39C642006D7856 /* String+Extensions.swift in Sources */,
 				1D17AFFE2B401055001052D4 /* AppState.swift in Sources */,
 				1D1458CD2B39A684006D7856 /* ContentView.swift in Sources */,
+				1DB71A182B60309A0039266F /* UIImagePickerController+Extensions.swift in Sources */,
 				1D6FBF5C2B53E8A700C5A3BD /* ChatMessage.swift in Sources */,
 				1D1459132B39C3BA006D7856 /* SignUpView.swift in Sources */,
 				1D17B0002B408ED1001052D4 /* GroupListContainerView.swift in Sources */,

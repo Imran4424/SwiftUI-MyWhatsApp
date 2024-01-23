@@ -56,6 +56,9 @@ struct SettingsView: View {
             }
         }
         .padding()
+        .sheet(item: $settingsConfig.sourceType, content: { sourceType in
+            ImagePicker(image: $settingsConfig.selectedImage, sourceType: sourceType)
+        })
         .onAppear {
             settingsConfig.displayName = displayName
         }
