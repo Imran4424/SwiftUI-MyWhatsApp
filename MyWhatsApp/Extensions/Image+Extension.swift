@@ -19,9 +19,9 @@ extension Image {
 
 extension UIImage {
     // source - StackOverflow
-    func resize(to targetSize: CGSize = CGSize(width: 300, height: 300)) -> UIImage? {
-        let widthRatio = self.size.width / targetSize.width
-        let heightRatio = self.size.height / targetSize.height
+    func resize(to size: CGSize = CGSize(width: 300, height: 300)) -> UIImage? {
+        let widthRatio = size.width / size.width
+        let heightRatio = size.height / size.height
         
         var newSize: CGSize
         
